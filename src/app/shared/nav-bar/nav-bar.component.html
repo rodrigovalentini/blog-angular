@@ -1,0 +1,35 @@
+<div class="container">
+  <div id="nav-bar">
+    <mat-sidenav-container class="sidenav-container" fullscreen>
+      <mat-sidenav
+        #drawer
+        class="sidenav"
+        fixedInViewport
+        [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+        [mode]="(isHandset$ | async) ? 'over' : 'side'"
+        [opened]="(isHandset$ | async) === true"
+      >
+        <mat-toolbar id="mat-toolbar">
+        </mat-toolbar>
+        <mat-nav-list>
+        </mat-nav-list>
+      </mat-sidenav>
+      <mat-sidenav-content mat-toolbar>
+        <mat-toolbar>
+          <button
+            type="button"
+            aria-label="Toggle sidenav"
+            mat-icon-button
+            (click)="drawer.toggle()"
+            class="horizontal-menu-button"
+          >
+          </button>
+          <div class="horizontal-nav">
+          </div>
+          <span class="spacer"></span>
+        </mat-toolbar>
+        <ng-content #name></ng-content>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+  </div>
+</div>
