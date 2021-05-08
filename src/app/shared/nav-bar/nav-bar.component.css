@@ -7,23 +7,24 @@ a {
   position: relative;
   text-decoration: none;
   transition: color 0.4s ease-out;
+  margin: 20px;
 }
 
 a:hover {
-  color: rgb(212, 236, 146);
+  color: rgb(158, 255, 242);
   right: 0;
   text-decoration: none;
   text-shadow: 1px 0 6px rgba(7, 61, 57, 0.74);
 }
 
 a:hover:after {
-  color: rgb(212, 236, 146);
+  border-color: rgb(158, 255, 242);
   right: 0;
 }
 
 a:after {
   box-shadow: 1px 0 6px rgba(0, 0, 0, 0.74);
-  border-top: 3px solid rgb(212, 236, 146);
+  border-top: 3px solid rgb(158, 203, 255);
   margin-bottom: 43px;
   content: "";
   position: absolute;
@@ -33,16 +34,10 @@ a:after {
   transition: right 0.5s cubic-bezier(0, 0.5, 0, 1), border-color 0.4s ease-out;
 }
 
-.btn-language {
-  font-weight: bold;
-  background-color: Transparent;
-  background-repeat: no-repeat;
-  border: none;
-  cursor: pointer;
-  overflow: hidden;
-  outline: none;
-  color: rgb(255, 255, 255);
-  font-size: 30px;
+#nav-logo {
+  width: auto;
+  height: auto;
+  z-index: 1;
 }
 
 .sidenav-container {
@@ -66,14 +61,22 @@ a:after {
 #mat-toolbar {
   background: linear-gradient(
     to right,
-    rgb(115, 230, 172),
-    rgb(37, 182, 170),
-    rgb(27, 154, 212)
+    rgb(25, 180, 250),
+    rgb(0, 67, 145),
+    rgb(0, 67, 145)
   );
 }
 
 #nav-logo {
   max-width: 90px;
+  max-height: 60px;
+  width: auto;
+  height: auto;
+  z-index: 1;
+}
+
+#nav-logo-mobile {
+  max-width: 60px;
   max-height: 60px;
   width: auto;
   height: auto;
@@ -91,10 +94,6 @@ a:after {
 .exit-label {
   font-size: 12px;
   cursor: pointer;
-}
-
-.logo {
-  height: 55px;
 }
 
 @keyframes anchor-underline {
@@ -116,10 +115,10 @@ a:after {
 }
 
 .active-link {
-  color: rgb(212, 236, 146);
+  color: rgb(158, 255, 242);
   right: 0;
   text-decoration: none;
-  text-shadow: 1px 0 6px rgba(5, 109, 102, 0.74);
+  text-shadow: 1px 0 6px rgba(7, 61, 57, 0.74);
 }
 
 @media only screen and (max-width: 1050px) {

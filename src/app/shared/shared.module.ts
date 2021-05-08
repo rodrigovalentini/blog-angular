@@ -10,42 +10,51 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { BlogDashboardComponent } from './blog-dashboard/blog-dashboard.component';
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
-    declarations: [NavBarComponent],
-    imports: [
-      CommonModule,
-      FormsModule,
-      ReactiveFormsModule,
-      LayoutModule,
-      MatToolbarModule,
-      MatButtonModule,
-      MatSidenavModule,
-      MatIconModule,
-      MatListModule,
-      RouterModule
-    ],
-    exports: [
-      CommonModule,
-      FormsModule,
-      ReactiveFormsModule,
-      LayoutModule,
-      MatToolbarModule,
-      MatButtonModule,
-      MatSidenavModule,
-      MatIconModule,
-      MatListModule,
-      NavBarComponent,
-       RouterModule
-    ],
-    providers: [],
-  })
-  export class SharedModule {
-    public static forRoot(): ModuleWithProviders<SharedModule> {
-      return {
-        ngModule: SharedModule,
-        providers: [
-        ],
-      };
-    }
+  declarations: [NavBarComponent, BlogDashboardComponent],
+  imports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+    MatGridListModule,
+    MatCardModule,
+    RouterModule,
+    MatMenuModule,
+  ],
+  exports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+    NavBarComponent,
+    MatGridListModule,
+    MatCardModule,
+    RouterModule,
+    BlogDashboardComponent,
+  ],
+  providers: [],
+})
+export class SharedModule {
+  public static forRoot(): ModuleWithProviders<SharedModule> {
+    return {
+      ngModule: SharedModule,
+      providers: [],
+    };
   }
+}
