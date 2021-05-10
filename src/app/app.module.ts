@@ -10,7 +10,7 @@ import { AppRoutingModule } from './app.routes';
   declarations: [AppComponent],
   imports: [
     SharedModule.forRoot(),
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,
